@@ -4,34 +4,55 @@ const resultarea = document.querySelector(".resultarea");
 const result = document.querySelector(".equalto");
 const clear = document.querySelector(".clear");
 const theme = document.querySelector(".theme");
+const error = document.querySelector(".error");
+
+
+var noinput = document.createTextNode('Please enter something first');
+var invinput = document.createTextNode('Invalid input');
+
 
 function append(exp,value){
-    if(exp===""){
-        return value;
-    }
     exp += value;
     return exp;
 }
 
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
 for(let i=0; i < buttons.length; i++){
     buttons[i].onclick = function(){
-        input.value = append(input.value,buttons[i].innerText);
+        input.value = append(input.value,buttons[i].innerText).trim();
     }
 }
 
 function solve(input){
-    const ans = eval(input);
-    return ans;
+    if (input.trim()=="") {
+        error.appendChild(noinput);
+    }
+    try {
+        eval(input); 
+    } catch (e) {
+        if (e instanceof SyntaxError) {
+            error.appendChild(invinput);
+        } 
+    }
+    return eval(input);
 }
 
 result.onclick = function(){   
-    resultarea.value = solve(input.value);
+    var ans = solve(input.value);
+    if (ans != undefined) {
+        resultarea.value = ans;
+    }
 }
 
 String.prototype.removelast = function (i) {
-    var tmp = this.split(''); // convert to an array
-    tmp.splice(i  , 1); // remove 1 element from the array (adjusting for non-zero-indexed counts)
-    return tmp.join(''); // reconstruct the string
+    var tmp = this.split(''); 
+    tmp.splice(i  , 1); 
+    return tmp.join(''); 
 }
 
 clear.onclick = function(){
@@ -42,4 +63,5 @@ clear.onclick = function(){
 clear.addEventListener('long-press', function(e) {
     input.value="";
     resultarea.value="";
+    removeAllChildNodes(error);
 });

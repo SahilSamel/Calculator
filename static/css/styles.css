@@ -9,7 +9,6 @@ body {
 }
 
 .wrapper {
-  margin: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -173,6 +172,16 @@ body {
 
 .info img {
   width: 42%;
+}
+
+.error{
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
 }
 
 @media (min-width: 480px) and (max-width: 720px) {
