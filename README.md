@@ -8,6 +8,6 @@
 
 
 <p align="center">
-  <a href="https://calculatorwithme.netlify.app/">A simple Calculator</a>
+  <a href="https://calculatorwithme.netlify.app/" target="_blank">A simple Calculator</a>
 </p>
 
