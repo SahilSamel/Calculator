@@ -1,3 +1,13 @@
 # Calculator
-![favicon](https://user-images.githubusercontent.com/81075927/147385847-010c372f-17a8-4346-9e2f-96abe75f1d2e.png)
-[A simple Calculator](https://calculatorwithme.netlify.app/)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/81075927/147386147-419a9485-bc8d-436e-b729-eb7a6e416b4a.png">
+</p>
+
+
+
+
+<p align="center">
+  <a href="https://calculatorwithme.netlify.app/">A simple Calculator</a>
+</p>
+
