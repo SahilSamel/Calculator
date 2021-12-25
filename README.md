@@ -11,3 +11,5 @@
   <a href="https://calculatorwithme.netlify.app/" target="_blank">A simple Calculator</a>
 </p>
 
+## Features
+- Basic arithmatic operations
