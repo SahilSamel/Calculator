@@ -13,3 +13,4 @@
 
 ## Features
 - Basic arithmatic operations
+- Light/Dark theme
