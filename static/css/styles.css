@@ -8,7 +8,7 @@ body {
   background-color: rgb(34, 34, 34);
 }
 
-.hide{
+.hide {
   display: none;
 }
 
@@ -78,30 +78,39 @@ body {
   grid-area: number0;
   border-bottom-left-radius: 12px;
 }
+
 .number1 {
   grid-area: number1;
 }
+
 .number2 {
   grid-area: number2;
 }
+
 .number3 {
   grid-area: number3;
 }
+
 .number4 {
   grid-area: number4;
 }
+
 .number5 {
   grid-area: number5;
 }
+
 .number6 {
   grid-area: number6;
 }
+
 .number7 {
   grid-area: number7;
 }
+
 .number8 {
   grid-area: number8;
 }
+
 .number9 {
   grid-area: number9;
 }
@@ -168,7 +177,7 @@ body {
   width: 42%;
 }
 
-.error{
+.error {
   background-color: transparent;
   color: white;
   position: absolute;
@@ -178,41 +187,47 @@ body {
   margin: auto;
 }
 
-.body-light{
+
+/*            Light Theme              */
+
+.body-light {
   background-color: #D3D0CBFF;
 }
 
-.inputarea-light{
+.inputarea-light {
   background-color: #6E8898FF;
   color: white;
 }
 
-.resultarea-light{
+.resultarea-light {
   background-color: #2E5266FF;
   color: #9FB1BCFF;
 }
 
-.buttons-light{
+.buttons-light {
   background-color: #9FB1BCFF;
   color: rgb(70, 74, 82);
 }
 
-.buttons-light:hover{
+.buttons-light:hover {
   background-color: white;
 }
 
-.buttons-light :hover{
+.buttons-light :hover {
   filter: drop-shadow(0px 0px 10px #9b9b9b);
 }
 
-.error-light{
+.error-light {
   color: rgb(70, 74, 82);
 }
 
+
+/*               mobile responsiveness                */
 @media (min-width: 480px) and (max-width: 720px) {
   * {
     font-size: 1.25rem;
   }
+
   .wrapper {
     grid-template-columns: 75px 75px 75px 75px 75px;
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
@@ -230,6 +245,7 @@ body {
   * {
     font-size: 1.25rem;
   }
+
   .wrapper {
     grid-template-columns: 75px 75px 75px 75px 75px;
     grid-template-rows: 50px 50px 50px 50px 50px 50px;
@@ -246,8 +262,9 @@ body {
 @media (min-width: 250px) and (max-width: 419px) {
   * {
     font-size: 1.1rem;
-    
+
   }
+
   .wrapper {
     grid-template-columns: 50px 50px 50px 50px 50px;
     grid-template-rows: 35px 35px 35px 35px 35px 35px;

@@ -4,25 +4,25 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
     background-color: rgb(51, 51, 51);
 }
 
-.wrapper{
+.wrapper {
     margin: auto;
     width: 50%;
     color: whitesmoke;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.goback a{
+.goback a {
     position: absolute;
     left: 15px;
     top: 0;
@@ -31,87 +31,95 @@ a{
 
 }
 
-.goback a:hover{
+.goback a:hover {
     filter: drop-shadow(3px 3px 15px #e0e0e0);
-    
+
 }
 
-footer
-{
+footer {
     color: rgb(51, 51, 51);
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
     left: 0;
-	padding: 0.5em 0;
-	background-color: white;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 0.5em 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: rgb(128, 175, 160);
 }
 
-.body-light{
+
+/*           Light Theme           */
+
+.body-light {
     background-color: #D3D0CBFF;
 }
 
-.wrapper-light{
-    color:#2E5266FF;
+.wrapper-light {
+    color: #2E5266FF;
 }
 
-.footer-light{
+.footer-light {
     background-color: #2E5266FF;
     color: white;
 }
 
-.goback-light a{
+.goback-light a {
     color: #6E8898FF;
 }
 
-.goback-light a:hover{
+.goback-light a:hover {
     filter: drop-shadow(3px 3px 15px rgb(20, 36, 46));
 }
 
-@media (min-width: 720px) and (max-width: 1024px){
+/*               mobile responsiveness                */
+
+@media (min-width: 720px) and (max-width: 1024px) {
     * {
         font-size: 1.3rem;
-      }
-      .wrapper{
-          width: 65%;
-      }
+    }
+
+    .wrapper {
+        width: 65%;
+    }
 }
 
 @media (min-width: 480px) and (max-width: 720px) {
     * {
-      font-size: 1.25rem;
+        font-size: 1.25rem;
     }
-    .wrapper{
+
+    .wrapper {
         width: 80%;
     }
-    
+
 }
-  
+
 @media (min-width: 420px) and (max-width: 479px) {
     * {
-      font-size: 1.25rem;
+        font-size: 1.25rem;
     }
-    .wrapper{
+
+    .wrapper {
         width: 75%;
     }
-    
+
 }
-  
+
 @media (min-width: 250px) and (max-width: 419px) {
     * {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
-    .wrapper{
+
+    .wrapper {
         width: 80%;
     }
-    
-} 
+
+}

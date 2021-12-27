@@ -17,6 +17,8 @@ var invinput = document.createTextNode('Invalid input');
 
 let prevmode;
 
+//          Main Functionality
+
 function append(exp,value){
     exp += value;
     return exp;
@@ -48,12 +50,16 @@ function solve(input){
     return eval(input);
 }
 
+// Equal to button function
+
 result.onclick = function(){   
     var ans = solve(inputarea.value);
     if (ans != undefined) {
         resultarea.value = ans;
     }
 }
+
+// Function for backspace
 
 String.prototype.removelast = function (i) {
     var tmp = this.split(''); 
@@ -66,11 +72,15 @@ clear.onclick = function(){
     inputarea.value=string.removelast(-1);
 }
 
+// Function for all clear
+
 clear.addEventListener('long-press', function(e) {
     inputarea.value="";
     resultarea.value="";
     removeAllChildNodes(error);
 });
+
+// Theme functionality
 
 window.onload = function () {
     prevmode = localStorage.getItem("theme");

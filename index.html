@@ -1,101 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Sahil Samel" />
     <meta property="og:site_name" content="Calculator" />
     <meta property="og:title" content="Calculator" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:description"
-      content="A simple Calculator"
-    />
+    <meta property="og:description" content="A simple Calculator" />
     <meta property="og:url" content="https://calculatorwithme.netlify.app/" />
     <meta
       property="og:image"
       content="https://calculatorwithme.netlify.app/static/images/favicon.png"
     />
 
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <link rel="icon" sizes="192x192" href="/static/images/favicon.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+
     <script defer src="/static/js/script.js"></script>
     <script defer src="/static/js/long-press-event.js"></script>
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="wrapper">
-            <textarea type="text" class="inputarea" readonly required>
-            </textarea>
-            
-            <textarea class="resultarea" disabled>
+      <div class="wrapper">
+        <textarea type="text" class="inputarea" readonly required> </textarea>
 
-            </textarea>
-            <button class="buttons input numbers number0">
-                0
-            </button>
-            <button class="buttons input numbers number1">
-                1
-            </button>
-            <button class="buttons input numbers number2">
-                2
-            </button>
-            <button class="buttons input numbers number3">
-                3
-            </button>
-            <button class="buttons input numbers number4">
-                4
-            </button>
-            <button class="buttons input numbers number5">
-                5
-            </button>
-            <button class="buttons input numbers number6">
-                6
-            </button>
-            <button class="buttons input numbers number7">
-                7
-            </button>
-            <button class="buttons input numbers number8">
-                8
-            </button>
-            <button class="buttons input numbers number9">
-                9
-            </button>
-            <button class="buttons input numbers dot">
-                .
-            </button>
-            <button class="buttons equalto">
-                =
-            </button>
-            <button class="buttons input add">
-                +
-            </button>
-            <button class="buttons input sub">
-                -
-            </button>
-            <button class="buttons input mult">
-                *
-            </button>
-            <button class="buttons input divide">
-                /
-            </button>
-            <button class="buttons clear" data-long-press-delay="500">
-                <img src="/static/images/32px-Ic_backspace_48px.svg.png" alt="">
-            </button>
-            <button class="buttons info">
-                <a href="/info.html"><img id = "dark" src="/static/images/32px-Question_mark_white_icon.svg.png" alt="dark"><img id = "light" src="/static/images/32px-Question,_Web_Fundamentals.svg.png" alt="light" class = "hide"></a>
-            </button>
-            <button class="buttons theme">
-                <img src="/static/images/Icon_Night_Mode_Dark_Theme.svg.png" alt="">
-            </button>
-        </div>
-        
-        <div class="error">
-        </div>
+        <textarea class="resultarea" disabled> </textarea>
+        <button class="buttons input numbers number0">0</button>
+        <button class="buttons input numbers number1">1</button>
+        <button class="buttons input numbers number2">2</button>
+        <button class="buttons input numbers number3">3</button>
+        <button class="buttons input numbers number4">4</button>
+        <button class="buttons input numbers number5">5</button>
+        <button class="buttons input numbers number6">6</button>
+        <button class="buttons input numbers number7">7</button>
+        <button class="buttons input numbers number8">8</button>
+        <button class="buttons input numbers number9">9</button>
+        <button class="buttons input numbers dot">.</button>
+        <button class="buttons equalto">=</button>
+        <button class="buttons input add">+</button>
+        <button class="buttons input sub">-</button>
+        <button class="buttons input mult">*</button>
+        <button class="buttons input divide">/</button>
+        <button class="buttons clear" data-long-press-delay="500">
+          <img src="/static/images/32px-Ic_backspace_48px.svg.png" alt="" />
+        </button>
+        <button class="buttons info">
+          <a href="/info.html"
+            ><img
+              id="dark"
+              src="/static/images/32px-Question_mark_white_icon.svg.png"
+              alt="dark" /><img
+              id="light"
+              src="/static/images/32px-Question,_Web_Fundamentals.svg.png"
+              alt="light"
+              class="hide"
+          /></a>
+        </button>
+        <button class="buttons theme">
+          <img src="/static/images/Icon_Night_Mode_Dark_Theme.svg.png" alt="" />
+        </button>
+      </div>
 
+      <div class="error"></div>
     </main>
-</body>
+  </body>
 </html>
