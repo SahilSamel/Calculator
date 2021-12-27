@@ -56,6 +56,27 @@ footer a{
     color: rgb(128, 175, 160);
 }
 
+.body-light{
+    background-color: #D3D0CBFF;
+}
+
+.wrapper-light{
+    color:#2E5266FF;
+}
+
+.footer-light{
+    background-color: #2E5266FF;
+    color: white;
+}
+
+.goback-light a{
+    color: #6E8898FF;
+}
+
+.goback-light a:hover{
+    filter: drop-shadow(3px 3px 15px rgb(20, 36, 46));
+}
+
 @media (min-width: 720px) and (max-width: 1024px){
     * {
         font-size: 1.3rem;
