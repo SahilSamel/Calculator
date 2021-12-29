@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
-    font-size: 1.35rem;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-size: 1.35rem;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(51, 51, 51);
+    margin-top: 10px;
 }
 
 .wrapper {
@@ -16,10 +19,15 @@ body {
 
 h1 {
     text-align: center;
+    color: whitesmoke;
 }
 
 a {
     text-decoration: none;
+}
+
+li{
+    margin: 15px;
 }
 
 .goback a {
@@ -27,8 +35,7 @@ a {
     left: 15px;
     top: 0;
     color: aqua;
-    font-size: 1.75rem;
-
+    font-size: 2rem;
 }
 
 .goback a:hover {
@@ -45,7 +52,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding: 0.5em 0;
+    padding: 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
@@ -60,6 +67,10 @@ footer a {
 
 .body-light {
     background-color: #D3D0CBFF;
+}
+
+.header-light h1{
+    color: #2E5266FF;
 }
 
 .wrapper-light {
@@ -97,7 +108,7 @@ footer a {
     }
 
     .wrapper {
-        width: 80%;
+        width: 85%;
     }
 
 }
@@ -108,7 +119,7 @@ footer a {
     }
 
     .wrapper {
-        width: 75%;
+        width: 85%;
     }
 
 }
@@ -119,7 +130,7 @@ footer a {
     }
 
     .wrapper {
-        width: 80%;
+        width: 90%;
     }
 
 }

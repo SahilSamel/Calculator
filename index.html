@@ -9,11 +9,14 @@
     <meta property="og:title" content="Calculator" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A simple Calculator" />
-    <meta property="og:url" content="https://calculatorwithme.netlify.app/" />
+    <meta property="og:url" content="https://calculatorwithme.netlify.app" />
     <meta
       property="og:image"
       content="https://calculatorwithme.netlify.app/static/images/favicon.png"
     />
+
+    <script defer src="/static/js/script.js"></script>
+    <script defer src="/static/js/long-press-event.js"></script>
 
     <link rel="stylesheet" href="/static/css/styles.css" />
     <link
@@ -23,16 +26,13 @@
       type="image/x-icon"
     />
 
-    <script defer src="/static/js/script.js"></script>
-    <script defer src="/static/js/long-press-event.js"></script>
     <title>Calculator</title>
   </head>
   <body>
     <main>
       <div class="wrapper">
-        <textarea type="text" class="inputarea" readonly required> </textarea>
-
-        <textarea class="resultarea" disabled> </textarea>
+        <textarea class="inputarea" readonly required title="input"> </textarea>
+        <textarea class="resultarea" disabled title="result"> </textarea>
         <button class="buttons input numbers number0">0</button>
         <button class="buttons input numbers number1">1</button>
         <button class="buttons input numbers number2">2</button>
@@ -49,23 +49,46 @@
         <button class="buttons input sub">-</button>
         <button class="buttons input mult">*</button>
         <button class="buttons input divide">/</button>
-        <button class="buttons clear" data-long-press-delay="500">
-          <img src="/static/images/32px-Ic_backspace_48px.svg.png" alt="" />
+        <button class="buttons clear" data-long-press-delay="500" title="Clear">
+          <img
+            id="darkbackspace"
+            src="/static/images/backspace-dark.svg"
+            alt="darkBackspace"
+          />
+          <img
+            id="lightbackspace"
+            src="/static/images/backspace-light.svg"
+            alt="lightBackspace"
+            class="hide"
+          />
         </button>
-        <button class="buttons info">
-          <a href="/info.html"
-            ><img
-              id="dark"
-              src="/static/images/32px-Question_mark_white_icon.svg.png"
-              alt="dark" /><img
-              id="light"
-              src="/static/images/32px-Question,_Web_Fundamentals.svg.png"
-              alt="light"
-              class="hide"
-          /></a>
-        </button>
-        <button class="buttons theme">
-          <img src="/static/images/Icon_Night_Mode_Dark_Theme.svg.png" alt="" />
+        <a href="info.html" class="buttons info" title="Info">
+          <img
+            id="darkquestion"
+            src="/static/images/questionmark-dark.svg"
+            alt="dark"
+          />
+          <img
+            id="lightquestion"
+            src="/static/images/questionmark-light.svg"
+            alt="light"
+            class="hide"
+          />
+        </a>
+        <button class="buttons theme" title="theme">
+          <img
+            id="darktheme"
+            src="/static/images/light-theme.svg"
+            alt="theme"
+            title="Set Light theme"
+          />
+          <img
+            id="lighttheme"
+            src="/static/images/dark-theme.svg"
+            alt="theme"
+            class="hide"
+            title="Set Dark theme"
+          />
         </button>
       </div>
 

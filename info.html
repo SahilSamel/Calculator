@@ -9,14 +9,15 @@
     <meta property="og:title" content="Calculator" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="A simple Calculator" />
-    <meta property="og:url" content="https://calculatorwithme.netlify.app/" />
+    <meta property="og:url" content="https://calculatorwithme.netlify.app" />
     <meta
       property="og:image"
       content="https://calculatorwithme.netlify.app/static/images/favicon.png"
     />
+    
+    <script defer src="/static/js/info.js"></script>
 
     <link rel="stylesheet" href="/static/css/info.css" />
-    <script defer src="/static/js/info.js"></script>
     <link
       rel="icon"
       sizes="192x192"
@@ -27,20 +28,24 @@
     <title>Calculator</title>
   </head>
   <body>
+    <header>
+      <section class="goback">
+        <a href="/">&larr;</a>
+      </section>
+      <h1>Instructions</h1>
+    </header>
     <main>
       <div class="wrapper">
-        <section class="goback">
-          <a href="/index.html">&larr;</a>
-        </section>
-        <h1>Instructions</h1>
         <ul>
           <li>
             This is a simple calculator that can perform basic arithmatic
             Addition, Subtraction, Multiplication, Division.
           </li>
           <li>
-            An expression, as a whole, can be entered. For example:-
-            <dd>6+5</dd>
+            <dl>
+              <dt>An expression, as a whole, can be entered. For example:-</dt>
+              <dd>6+5</dd>
+            </dl>
           </li>
           <li>
             To input negative numbers,simply input the "-" sign before the
@@ -58,7 +63,6 @@
           </li>
           <li>
             Choose between light and dark theme, by pressing the theme button
-            (Dark theme is default)
           </li>
         </ul>
       </div>

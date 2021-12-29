@@ -1,20 +1,26 @@
 const input = document.querySelectorAll(".input");
+const wrapper = document.querySelector(".wrapper");
 const inputarea = document.querySelector(".inputarea");
 const resultarea = document.querySelector(".resultarea");
 const result = document.querySelector(".equalto");
 const clear = document.querySelector(".clear");
+const info = document.querySelector(".info");
 const theme = document.querySelector(".theme");
 const error = document.querySelector(".error");
-const buttons =document.querySelectorAll(".buttons");
+const buttons = document.querySelectorAll(".buttons");
 const body = document.querySelector("body");
-const darkquestion = document.getElementById("dark");
-const lightquestion = document.getElementById("light");
+const lightbackspace = document.querySelector("#lightbackspace");
+const darkbackspace = document.querySelector("#darkbackspace");
+const darkquestion = document.querySelector("#darkquestion");
+const lightquestion = document.querySelector("#lightquestion");
+const lighttheme = document.querySelector("#lighttheme");
+const darktheme = document.querySelector("#darktheme");
 
-
+//          Errors
 var noinput = document.createTextNode('Please enter something first');
 var invinput = document.createTextNode('Invalid input');
 
-
+//          Storing theme mode 
 let prevmode;
 
 //          Main Functionality
@@ -31,9 +37,12 @@ function removeAllChildNodes(parent) {
 }
 
 for(let i=0; i < input.length; i++){
-    input[i].onclick = function(){
-        inputarea.value = append(inputarea.value,input[i].innerText).trim();
-    }
+    input[i].addEventListener(
+        "click",
+        () =>{
+            inputarea.value = append(inputarea.value,input[i].innerText).trim();
+        }
+    );
 }
 
 function solve(input){
@@ -52,12 +61,16 @@ function solve(input){
 
 // Equal to button function
 
-result.onclick = function(){   
-    var ans = solve(inputarea.value);
-    if (ans != undefined) {
-        resultarea.value = ans;
+result.addEventListener(
+    "click",
+    () =>
+    {
+        var ans = solve(inputarea.value);
+        if (ans != undefined) {
+            resultarea.value = ans;
+        }
     }
-}
+);
 
 // Function for backspace
 
@@ -67,23 +80,33 @@ String.prototype.removelast = function (i) {
     return tmp.join(''); 
 }
 
-clear.onclick = function(){
-    let string = inputarea.value;
-    inputarea.value=string.removelast(-1);
-}
-
+clear.addEventListener(
+    "click",
+    () =>
+    {
+        let string = inputarea.value;
+        inputarea.value=string.removelast(-1);
+    }
+);
 // Function for all clear
 
-clear.addEventListener('long-press', function(e) {
+clear.addEventListener(
+    'long-press', 
+    function(e) {
     inputarea.value="";
     resultarea.value="";
     removeAllChildNodes(error);
 });
 
+
+
 // Theme functionality
 
-window.onload = function () {
-    prevmode = localStorage.getItem("theme");
+window.addEventListener(
+    "load",
+    () =>
+    {
+        prevmode = localStorage.getItem("theme");
 
 		if(!prevmode)
 		{
@@ -93,32 +116,41 @@ window.onload = function () {
 
 		else if(prevmode === "light")
 			changetheme();
-}
-
-theme.onclick = function(){
-    if (prevmode === "dark") {
-        localStorage.setItem("theme", "light");
-        prevmode = "light";
-        changetheme();
     }
+);
 
-    else if (prevmode === "light") {
-        localStorage.setItem("theme", "dark");
-        prevmode = "dark";
-        changetheme();
+theme.addEventListener(
+    "click",
+    () =>
+    {
+        if (prevmode === "dark") {
+            localStorage.setItem("theme", "light");
+            prevmode = "light";
+            changetheme();
+        }
+    
+        else if (prevmode === "light") {
+            localStorage.setItem("theme", "dark");
+            prevmode = "dark";
+            changetheme();
+        }
     }
-}
+)
 
 function changetheme(){
-inputarea.classList.toggle("inputarea-light");
-resultarea.classList.toggle("resultarea-light");
-body.classList.toggle("body-light");
-error.classList.toggle("error-light");
-lightquestion.classList.toggle("hide");
-darkquestion.classList.toggle("hide");
+    wrapper.classList.toggle("wrapper-light");
+    inputarea.classList.toggle("inputarea-light");
+    resultarea.classList.toggle("resultarea-light");
+    body.classList.toggle("body-light");
+    error.classList.toggle("error-light");
+    lightbackspace.classList.toggle("hide");
+    darkbackspace.classList.toggle("hide");
+    lightquestion.classList.toggle("hide");
+    darkquestion.classList.toggle("hide");
+    lighttheme.classList.toggle("hide");
+    darktheme.classList.toggle("hide");
 
-
-for(let i = 0; i < buttons.length; i++)
-	buttons[i].classList.toggle("buttons-light");
+    for(let i = 0; i < buttons.length; i++)
+	    buttons[i].classList.toggle("buttons-light");
 }
 
